@@ -8,7 +8,7 @@ application.get('/', (request, response) => {
 });
 
 application.get('/check-health', (request, response) => {
-   response.status(200).json({message: 'Service is running'});
+   response.status(200).json({message: `Service is running on port ${process.env.PORT}`});
 });
 
 application.listen(process.env.PORT, () => {
